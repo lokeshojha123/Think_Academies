@@ -1,0 +1,113 @@
+/*--------------------PROFILE SECTION--------------*/
+
+.profile-section {
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: #fff;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*-------------TITLE---------------*/
+
+.profile-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  background: linear-gradient(270deg, #1e90ff, #7f5cff);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*------------------TABS------------------*/
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-tabs button {
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  border: 2px solid rgba(255,255,255,0.3);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.profile-tabs button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.profile-tabs button.active {
+  /* background: linear-gradient(270deg, #1e90ff, #7f5cff); */
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(127,92,255,0.5);
+}
+
+/*-----------------CONTENT------------------*/
+
+.profile-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+  animation: fadeIn 0.4s ease;
+}
+
+.profile-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-content li {
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.profile-content li::before {
+  content: "✔";
+  color: #1e90ff;
+  margin-right: 0.5rem;
+}
+
+/*---------------ANIMATION----------------*/
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*-----------RESPONSIVE-----------------*/
+
+@media (max-width: 768px) {
+  .profile-title {
+    font-size: 2.4rem;
+  }
+
+  .profile-content {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-title {
+    font-size: 2rem;
+  }
+
+  .profile-tabs button {
+    width: 100%;
+  }
+}

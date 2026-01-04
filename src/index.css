@@ -1,0 +1,11 @@
+body
+{
+height: 100%;
+width: 100%;
+background: #161513;
+color: white;
+font-family: "outfit";
+}
+ #root {
+    width: 100%;
+ }

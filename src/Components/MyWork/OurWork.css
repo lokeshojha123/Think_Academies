@@ -1,0 +1,114 @@
+/*-----------------OUR WORK SECTION---------------*/
+
+.ourwork {
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at top, #0b0b0b, #000);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+/*-------------------TITLE-------------------- */
+
+.ourwork-title h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  background: linear-gradient(270deg, #1e90ff, #7f5cff);
+ -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*--------------------WORK GRID------------------*/
+
+.our-work-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Work images */
+.our-work-container img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.our-work-container img:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(30,144,255,0.35);
+}
+
+/*----------------SHOW MORE BUTTON-----------------*/
+
+.showmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.3);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.showmore svg {
+  transition: transform 0.3s ease;
+}
+
+.showmore:hover {
+  background: linear-gradient(270deg, #1e90ff, #7f5cff);
+  border-color: transparent;
+  box-shadow: 0 15px 35px rgba(127,92,255,0.6);
+}
+
+.showmore:hover svg {
+  transform: translateX(6px);
+}
+
+/*---------------RESPONSIVE------------------*/
+
+@media (max-width: 1024px) {
+  .ourwork-title h1 {
+    font-size: 2.6rem;
+  }
+
+  .our-work-container img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ourwork {
+    padding: 4rem 1.5rem;
+  }
+
+  .ourwork-title h1 {
+    font-size: 2.2rem;
+  }
+
+  .our-work-container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-work-container img {
+    height: 180px;
+  }
+
+  .showmore {
+    width: 100%;
+    justify-content: center;
+  }
+}

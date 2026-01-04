@@ -1,0 +1,116 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   background: linear-gradient(yellow green black );
+    padding: 0px 20px;
+}
+.navbar h1{
+    background: linear-gradient(270deg, #9d8888 10%, #db2121 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+    font-size: 28px;
+}
+.navbar img {
+    width: 140px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    font-size: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 5px; /* Changed from right to left */
+    background-color: rgb(37, 35, 35);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(204, 200, 200, 0.1);
+    width: 300px;
+}
+
+.nav-connect {
+    padding: 10px 15px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.5s);
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    cursor: pointer;
+}
+
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+    height: 2px;
+    width: 50px;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: wheat;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 20px;
+    height: 4px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        gap: 10px;
+    }
+
+    .nav-menu.open {
+        display: flex;
+        left: 5px;
+       background: linear-gradient(rgb(10, 179, 10) black blue rgb(225, 23, 23) black );
+    }
+
+    .nav-connect {
+        padding: 2px 10px;
+        display: none;
+    }
+
+    .hamburger {
+        order: -1;
+        display: flex;
+    }
+
+    .navbar h1 {
+        margin-right: 0px;
+    }
+}
