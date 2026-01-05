@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./Services.css";
 // import theme_pattern from "../../assets/main.svg"
-import Services_Data from '../../assets/Services_data';
+import Services_Data from '../../assets/services_data';
 import { FaArrowRight } from "react-icons/fa";
 
 const Services = () => {
